@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.codeyn.smartend.system.dao.JobInfoMapper" >
+    <resultMap id="JobInfoMapper" type="org.codeyn.smartend.system.model.JobInfo" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="type" property="type" jdbcType="INTEGER" />
+        <result column="job_point" property="jobPoint" jdbcType="INTEGER" />
+        <result column="create_time" property="createTime" jdbcType="BIGINT" />
+        <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+    </resultMap>
+    
+    <sql id="Base_Column_List" >
+        id,
+        type,
+        job_point,
+        create_time,
+        update_time
+    </sql>
+    
+    <insert id="addJobInfo" parameterType="org.codeyn.smartend.system.model.JobInfo" useGeneratedKeys="true" keyProperty="id" >
+        insert into tb_job_info (<include refid="Base_Column_List" />)
+        values (
+        #{id,jdbcType=INTEGER},
+        #{type,jdbcType=INTEGER},
+        #{jobPoint,jdbcType=INTEGER},
+        #{createTime,jdbcType=BIGINT},
+        #{updateTime,jdbcType=BIGINT}
+        )
+    </insert>
+    
+    <update id="updateJobInfo" parameterType="org.codeyn.smartend.system.model.JobInfo" >
+        update tb_job_info
+        <set>
+            id = #{id,jdbcType=INTEGER},
+            type = #{type,jdbcType=INTEGER},
+            job_point = #{jobPoint,jdbcType=INTEGER},
+            create_time = #{createTime,jdbcType=BIGINT},
+            update_time = #{updateTime,jdbcType=BIGINT}
+        </set>
+        where ID = #{id,jdbcType=INTEGER}
+    </update>
+    
+    <select id="getJobInfoByType" resultMap="JobInfoMapper" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from tb_job_info
+        where type = #{type,jdbcType=INTEGER}
+    </select>
+    
+</mapper>
