@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import javax.annotation.Resource;
 
 import org.codeyn.smartend.framework.base.AbstractJob;
+import org.codeyn.smartend.framework.util.PropertyConfigurer;
 import org.codeyn.smartend.system.model.JobInfo;
 import org.codeyn.smartend.system.service.JobInfoService;
 import org.springframework.stereotype.Service;
@@ -21,12 +22,12 @@ public class JobQuartz extends AbstractJob{
     
     @Override
     public String getJobName(){
-        return this.getClass().getName();
+        return getClass().getName();
     }
 
     @Override
     public boolean isSyncData(){
-        return true;
+        return Boolean.valueOf(PropertyConfigurer.get(DEFAULT_SYNC_ON));
     }
 
     @Override

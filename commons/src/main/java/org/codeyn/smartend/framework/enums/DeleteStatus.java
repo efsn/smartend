@@ -2,8 +2,6 @@ package org.codeyn.smartend.framework.enums;
 
 /**
  * 是否已删除
- * 
- * @author parcel
  */
 public enum DeleteStatus {
 

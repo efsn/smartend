@@ -10,9 +10,6 @@ import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateModelException;
 
-/**
- * @author badqiu
- */
 public class DirectiveUtils {
 
 	public static String BLOCK = "__ftl_override__";

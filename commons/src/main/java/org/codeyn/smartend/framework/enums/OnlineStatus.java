@@ -2,8 +2,6 @@ package org.codeyn.smartend.framework.enums;
 
 /**
  * 是否上线
- * 
- * @author parcel
  */
 public enum OnlineStatus {
 

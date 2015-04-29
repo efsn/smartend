@@ -2,7 +2,8 @@ package org.codeyn.smartend.framework.error;
 
 import org.apache.commons.lang.StringUtils;
 
-public class SqqAssert {
+public class EndAssert {
+    
 	private static final Object[] OBJ = new Object[] { "", "", "" };
 
 	private static void throwEx(ErrorType error, Object... message) {

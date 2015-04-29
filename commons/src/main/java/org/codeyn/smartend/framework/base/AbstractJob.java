@@ -12,6 +12,7 @@ import common.Logger;
 public abstract class AbstractJob extends TimerTask{
 
     public static final String ALL = "all";
+    
     public static final String HOST = "job.execute.host";
     
     protected final Logger logger = Logger.getLogger(this.getClass());
@@ -31,6 +32,7 @@ public abstract class AbstractJob extends TimerTask{
     public void run(){
         if(!isSyncData()){
             logger.info(getJobHost() + " execute forbidden.");
+            return;
         }
         
         try{

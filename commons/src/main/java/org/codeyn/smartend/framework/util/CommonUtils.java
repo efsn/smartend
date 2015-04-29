@@ -7,20 +7,11 @@ import org.apache.commons.lang.StringUtils;
 
 /**
  * 通用工具类
- * 
- * @author parcel
- * 
- * @date 2015-1-1
- * 
  */
 public class CommonUtils {
 
 	/**
 	 * 获取分页
-	 * 
-	 * @param pageNo
-	 * @param pageSize
-	 * @return
 	 */
 	public static int[] getPager(Integer pageNo, Integer pageSize) {
 		// 默认20条一页
@@ -37,13 +28,9 @@ public class CommonUtils {
 
 	/**
 	 * 获取子列表
-	 * 
-	 * @param list
-	 * @param start
-	 * @param limit
-	 * @return
 	 */
 	public static <T> List<T> getSubList(List<T> list, int start, int limit) {
+	    
 		if (list == null || list.isEmpty()) {
 			return new ArrayList<T>(0);
 		}
@@ -59,10 +46,6 @@ public class CommonUtils {
 
 	/**
 	 * 将字符串按分隔符分割并转成整型列表
-	 * 
-	 * @param ids
-	 * @param separator
-	 * @return
 	 */
 	public static List<Integer> str2IntList(String ids, String separator) {
 		List<Integer> idList = new ArrayList<Integer>();

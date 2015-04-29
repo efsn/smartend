@@ -11,9 +11,6 @@ import freemarker.template.TemplateDirectiveModel;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateModel;
 
-/**
- * @author parcel
- */
 public class BlockDirective implements TemplateDirectiveModel {
 	public final static String DIRECTIVE_NAME = "block";
 

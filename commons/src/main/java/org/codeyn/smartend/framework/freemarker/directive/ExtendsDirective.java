@@ -10,9 +10,6 @@ import freemarker.template.TemplateDirectiveModel;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateModel;
 
-/**
- * @author parcel
- */
 public class ExtendsDirective implements TemplateDirectiveModel {
 
 	public final static String DIRECTIVE_NAME = "extends";

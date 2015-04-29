@@ -2,8 +2,6 @@ package org.codeyn.smartend.framework.enums;
 
 /**
  * 选择状态
- * 
- * @author parcel
  */
 public enum SelectStatus {
 

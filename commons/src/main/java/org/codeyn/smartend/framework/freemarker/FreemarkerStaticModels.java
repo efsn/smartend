@@ -8,6 +8,7 @@ import freemarker.ext.beans.BeansWrapper;
 import freemarker.template.TemplateHashModel;
 
 public class FreemarkerStaticModels extends HashMap<Object, Object> {
+    
 	private static final long serialVersionUID = 1L;
 	private static FreemarkerStaticModels FREEMARKER_STATIC_MODELS;
 	private Properties staticModels;
