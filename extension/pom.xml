@@ -16,7 +16,7 @@
 		<logback-version>0.9.28</logback-version>
 		<logging-version>1.2</logging-version>
 	
-		<spring.version>3.2.8.RELEASE</spring.version>
+		<spring.version>4.3.1.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
